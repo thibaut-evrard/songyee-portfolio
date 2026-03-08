@@ -1,32 +1,22 @@
 {
-  "name": "example-basic",
-  "type": "module",
+  "name": "songyee-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/thibaut-evrard/songyee-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/thibaut-evrard/songyee-portfolio/issues"
+  },
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thibaut-evrard/songyee-portfolio.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
-    "version": "vinxi version",
-    "prepare": "husky"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "cd frontend && npm run lint"
   },
-  "dependencies": {
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.0",
-    "@solidjs/start": "^1.1.0",
-    "scss": "^0.2.4",
-    "solid-js": "^1.9.5",
-    "vinxi": "^0.5.7"
-  },
-  "devDependencies": {
-    "husky": "^9.1.7",
-    "oxfmt": "^0.34.0",
-    "oxlint": "^1.49.0",
-    "sass-embedded": "^1.97.3"
-  },
-  "engines": {
-    "node": ">=22"
-  }
+  "devDependencies": {}
 }

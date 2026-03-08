@@ -1,0 +1,14 @@
+.header {
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+
+  &__title {
+    flex: 1;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
