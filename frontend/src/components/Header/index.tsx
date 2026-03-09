@@ -15,7 +15,7 @@ const CONTENT = {
 export default function Header() {
   return (
     <header class="header">
-      <a href={""} class="header__title">
+      <a href={"http://localhost:3000/"} class="header__title">
         {CONTENT.title}
       </a>
       <nav>
