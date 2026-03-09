@@ -1,13 +1,13 @@
-import { Logs } from './logs';
+import { Logs } from "./logs";
 
 const SEPARATORS = {
-  nesting: '.',
-}
+  nesting: ".",
+};
 
 const REGEX: Record<string, RegExp> = {
   list: /\[\d*\]/,
   listIndex: /(?<=\[)\d*(?=\])/g,
-}
+};
 
 function isList(chunk: string) {
   return REGEX.list.test(chunk);
@@ -15,7 +15,7 @@ function isList(chunk: string) {
 
 function getListIndex(chunk: string) {
   const matches = chunk.match(REGEX.listIndex);
-  if(matches && matches.length > 0 && matches[0] !== "") {
+  if (matches && matches.length > 0 && matches[0] !== "") {
     return matches[0];
   } else {
     return undefined;
@@ -23,14 +23,14 @@ function getListIndex(chunk: string) {
 }
 
 function purifyChunk(chunk: string) {
-  return chunk.replace(REGEX.list, '');
+  return chunk.replace(REGEX.list, "");
 }
 
 class Content extends Object {
   currentKey = "";
 
   addRows(rows: string[][]) {
-    for(const row of rows) {
+    for (const row of rows) {
       this.addRow(row);
     }
   }
@@ -41,7 +41,7 @@ class Content extends Object {
     const keyChunks = key.split(SEPARATORS.nesting);
 
     this.currentKey = key;
-    this.processChunk(keyChunks, values, this)
+    this.processChunk(keyChunks, values, this);
   }
 
   private processChunk(keyChunks: string[], values: string[], target: any) {
@@ -49,10 +49,10 @@ class Content extends Object {
     const currentChunk = purifyChunk(rawCurrentChunk);
     const nextChunks = keyChunks.splice(1);
 
-    if(nextChunks.length === 0) {
-      if(values.length > 1) {
+    if (nextChunks.length === 0) {
+      if (values.length > 1) {
         target[currentChunk] = values;
-      } else if(values.length === 1) {
+      } else if (values.length === 1) {
         target[currentChunk] = values[0];
       } else {
         target[currentChunk] = "";
@@ -60,13 +60,13 @@ class Content extends Object {
       }
       return;
     }
-  
-    if(isList(rawCurrentChunk)) {
+
+    if (isList(rawCurrentChunk)) {
       const listIndex = getListIndex(rawCurrentChunk);
       target[currentChunk] = target[currentChunk] || [];
 
-      if(listIndex === undefined) {
-        for(const [index, value] of values.entries()) {
+      if (listIndex === undefined) {
+        for (const [index, value] of values.entries()) {
           target[currentChunk][index] = target[currentChunk][index] || {};
           this.processChunk(nextChunks, [value], target[currentChunk][index]);
         }

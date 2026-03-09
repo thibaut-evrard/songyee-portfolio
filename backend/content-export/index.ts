@@ -5,16 +5,12 @@ import { mkdir, writeFile } from "fs/promises";
 import { getTabNames } from "../utils/tabs";
 import { getAuthClient } from "../utils/auth";
 import "dotenv/config";
-import { Logs } from '../utils/logs';
+import { Logs } from "../utils/logs";
 
 const OUTPUT_FOLDER_PATH = "../frontend/src/generated";
 const OUTPUT_FILE_NAME = "content.json";
 
-export const SHEET_TABS = [
-  'home',
-  'about',
-  'project-[uid]'
-];
+export const SHEET_TABS = ["home", "about", "project-[uid]"];
 
 function targetTabs(names: string[], prefix: string) {
   return names.filter((name) => name.includes(prefix));
@@ -23,10 +19,7 @@ function targetTabs(names: string[], prefix: string) {
 async function saveDataToJson(content: any) {
   try {
     await mkdir(OUTPUT_FOLDER_PATH, { recursive: true });
-    await writeFile(
-      `${OUTPUT_FOLDER_PATH}/${OUTPUT_FILE_NAME}`,
-      JSON.stringify(content, null),
-    );
+    await writeFile(`${OUTPUT_FOLDER_PATH}/${OUTPUT_FILE_NAME}`, JSON.stringify(content, null));
     console.log(`Content successfully written`);
   } catch (error) {
     console.error(`Error writing types to file: ${error}`);
@@ -48,9 +41,9 @@ async function getSiteContent() {
 
   const home = await getTabContent(sheets, CONTENT_SHEET_ID, "home");
   const about = await getTabContent(sheets, CONTENT_SHEET_ID, "about");
-  
+
   let projects = [];
-  for(const projectName of targetTabs(tabNames, 'project-')) {
+  for (const projectName of targetTabs(tabNames, "project-")) {
     const projectContent = await getTabContent(sheets, CONTENT_SHEET_ID, projectName);
     projects.push(projectContent);
   }

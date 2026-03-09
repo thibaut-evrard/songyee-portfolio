@@ -17,7 +17,7 @@
     "tsx": "^4.21.0"
   },
   "devDependencies": {
-    "@types/node": "^25.3.5",
+    "@types/node": "^25.4.0",
     "oxfmt": "^0.34.0",
     "oxlint": "^1.49.0"
   }
