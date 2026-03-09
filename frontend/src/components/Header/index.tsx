@@ -20,7 +20,7 @@ export default function Header() {
       </a>
       <nav>
         {CONTENT.nav.map((route) => (
-          <a href={""}>{route.title}</a>
+          <a href={"http://localhost:3000/"}>{route.title}</a>
         ))}
       </nav>
     </header>
