@@ -11,6 +11,7 @@
     "content:export": "tsx content-export/index.ts"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.19.0",
     "dotenv": "^17.3.1",
     "google-auth-library": "^10.6.1",
     "googleapis": "^171.4.0",
