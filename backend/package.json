@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "content:export": "tsx content-export/index.ts"
+    "content:export": "tsx content-export/index.ts",
+    "media:export": "tsx media-export/index.ts",
+    "export": "npm run media:export && npm run content:export"
   },
   "dependencies": {
     "@google-cloud/storage": "^7.19.0",
