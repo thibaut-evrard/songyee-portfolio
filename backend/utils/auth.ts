@@ -1,10 +1,10 @@
 import { GoogleAuth, Impersonated } from "google-auth-library";
-import { SERVICE_ACCOUNT } from '../constants';
+import { SERVICE_ACCOUNT } from "../constants";
 
 export async function getAuthClient() {
   try {
     const auth = new GoogleAuth();
-    
+
     if (!SERVICE_ACCOUNT) {
       return auth;
     } else {
