@@ -16,7 +16,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "cd frontend && npm run lint:all"
+    "lint": "cd frontend && npm run lint:all",
+    "backend:export": "cd backend && npm run export",
+    "dev": "cd frontend && npm run dev"
   },
   "devDependencies": {
     "husky": "^9.1.7"
