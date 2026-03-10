@@ -25,8 +25,8 @@
           "title": "title",
           "description": "description",
           "media": [
-            { "src": "project-(example)/song-kim.webp", "alt": "alt" },
-            { "src": "project-(example)/song-kim.webp", "alt": "alt" }
+            { "src": "project-(example)/us.jpeg", "alt": "alt" },
+            { "src": "project-(example)/us.jpeg", "alt": "alt" }
           ]
         }
       ]
