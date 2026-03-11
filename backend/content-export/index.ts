@@ -41,6 +41,7 @@ async function getSiteContent() {
 
   const home = await getTabContent(sheets, CONTENT_SHEET_ID, "home");
   const about = await getTabContent(sheets, CONTENT_SHEET_ID, "about");
+  const general = await getTabContent(sheets, CONTENT_SHEET_ID, "general");
 
   let projects = [];
   for (const projectName of targetTabs(tabNames, "project-")) {
@@ -49,6 +50,7 @@ async function getSiteContent() {
   }
 
   const json = {
+    general,
     home,
     about,
     projects,
