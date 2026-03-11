@@ -14,6 +14,7 @@ export default function Home() {
       <Title>{APP_CONTENT.home.meta.title}</Title>
       <Meta name="description" content={APP_CONTENT.home.meta.description} />
 
+      <h1>{APP_CONTENT.general.title}</h1>
       <img src={getMediaUrl(media.src)} alt={media.alt} />
     </main>
   );
