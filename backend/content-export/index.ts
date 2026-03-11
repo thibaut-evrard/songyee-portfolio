@@ -7,7 +7,7 @@ import { getAuthClient } from "../utils/auth";
 import "dotenv/config";
 import { Logs } from "../utils/logs";
 
-const OUTPUT_FOLDER_PATH = "../frontend/src/generated";
+const OUTPUT_FOLDER_PATH = "../frontend/src/content";
 const OUTPUT_FILE_NAME = "content.json";
 
 export const SHEET_TABS = ["home", "about", "project-[uid]"];
