@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "content:export": "tsx content-export/index.ts",
+    "media:export": "tsx media-export/index.ts",
+    "export": "npm run media:export && npm run content:export"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.19.0",
+    "dotenv": "^17.3.1",
+    "google-auth-library": "^10.6.1",
+    "googleapis": "^171.4.0",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "oxfmt": "^0.34.0",
+    "oxlint": "^1.49.0"
+  }
+}

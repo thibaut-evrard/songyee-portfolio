@@ -5,13 +5,14 @@ import { Suspense } from "solid-js";
 import "./app.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { APP_CONTENT } from "./constants/content";
 
 export default function App() {
   return (
     <Router
       root={(props) => (
         <MetaProvider>
-          <Title>Food Monster</Title>
+          <Title>{APP_CONTENT.home.meta.title}</Title>
           <Header />
           <Suspense>{props.children}</Suspense>
           <Footer />
