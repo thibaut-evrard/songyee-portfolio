@@ -14,7 +14,9 @@ function getAllMedia(content: ProjectContent) {
 
 export default function Project() {
   const params = useParams();
-  const content = APP_CONTENT.projects.find((project) => project.slug === params.project);
+  const content = APP_CONTENT.projects.find(
+    (project) => project.slug === params.project,
+  );
 
   if (!content) {
     return null;

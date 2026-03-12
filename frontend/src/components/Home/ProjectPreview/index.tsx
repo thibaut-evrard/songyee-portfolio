@@ -1,5 +1,6 @@
 import { ProjectContent } from "~/content/types";
 import ProjectPreviewCarousel from "./Carousel";
+import { ROUTES } from "~/constants/routes";
 
 interface Props {
   content: ProjectContent;
@@ -19,7 +20,7 @@ export default function ProjectPreview(props: Props) {
   return (
     <div>
       <ProjectPreviewCarousel content={props.content.section[0].media} />
-      <p>{getDescription(props.content)}</p>
+      <a href={ROUTES.project(props.content.slug)}>{getDescription(props.content)}</a>
     </div>
   );
 }
