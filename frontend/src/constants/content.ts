@@ -1,3 +1,3 @@
-import json from "../generated/content.json";
+import json from "../content/content.json";
 
 export const APP_CONTENT = json;

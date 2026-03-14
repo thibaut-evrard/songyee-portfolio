@@ -7,7 +7,7 @@ import { getAuthClient } from "../utils/auth";
 import "dotenv/config";
 import { Logs } from "../utils/logs";
 
-const OUTPUT_FOLDER_PATH = "../frontend/src/generated";
+const OUTPUT_FOLDER_PATH = "../frontend/src/content";
 const OUTPUT_FILE_NAME = "content.json";
 
 export const SHEET_TABS = ["home", "about", "project-[uid]"];
@@ -41,6 +41,7 @@ async function getSiteContent() {
 
   const home = await getTabContent(sheets, CONTENT_SHEET_ID, "home");
   const about = await getTabContent(sheets, CONTENT_SHEET_ID, "about");
+  const general = await getTabContent(sheets, CONTENT_SHEET_ID, "general");
 
   let projects = [];
   for (const projectName of targetTabs(tabNames, "project-")) {
@@ -49,6 +50,7 @@ async function getSiteContent() {
   }
 
   const json = {
+    general,
     home,
     about,
     projects,

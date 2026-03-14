@@ -1,12 +1,6 @@
 import { Meta, Title } from "@solidjs/meta";
+import ProjectPreview from "~/components/Home/ProjectPreview";
 import { APP_CONTENT } from "~/constants/content";
-
-function getMediaUrl(path: string) {
-  console.log(path);
-  return `/media/${path}`;
-}
-
-const media = APP_CONTENT.projects[0].section[0].media[0];
 
 export default function Home() {
   return (
@@ -14,7 +8,12 @@ export default function Home() {
       <Title>{APP_CONTENT.home.meta.title}</Title>
       <Meta name="description" content={APP_CONTENT.home.meta.description} />
 
-      <img src={getMediaUrl(media.src)} alt={media.alt} />
+      <h2>{APP_CONTENT.home.hero.description}</h2>
+      <section>
+        {APP_CONTENT.projects.map((project) => (
+          <ProjectPreview content={project} />
+        ))}
+      </section>
     </main>
   );
 }

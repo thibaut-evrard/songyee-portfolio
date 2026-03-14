@@ -3,7 +3,6 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import "./app.scss";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { APP_CONTENT } from "./constants/content";
 
@@ -15,7 +14,6 @@ export default function App() {
           <Title>{APP_CONTENT.home.meta.title}</Title>
           <Header />
           <Suspense>{props.children}</Suspense>
-          <Footer />
         </MetaProvider>
       )}
     >
