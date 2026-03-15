@@ -7,7 +7,8 @@ import RichMedia from "@/components/Shared/RichMedia";
 import { APP_CONTENT } from "@/constants/content";
 
 export default function Project() {
-  let mediaSectionContainerRef: HTMLElement | null = null;
+  // oxlint-disable-next-line no-unassigned-vars
+  let mediaSectionContainerRef!: HTMLDivElement;
 
   const [activeSectionIndex, setActiveSectionIndex] = createSignal<number>(0);
   const [isAutoScroll, setIsAutoScroll] = createSignal(false);
