@@ -14,7 +14,7 @@ export const routes: RouteDefinition[] = [
   },
   {
     path: ROUTES.project(":uid?"),
-    component: lazy(() => import("./pages/project")),
+    component: lazy(() => import("./pages/project/index")),
   },
   {
     path: "**",
