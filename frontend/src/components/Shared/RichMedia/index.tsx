@@ -1,4 +1,4 @@
-import { MediaContent } from "~/content/types";
+import { MediaContent } from "@/content/types";
 
 interface Props {
   content: MediaContent;

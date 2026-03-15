@@ -1,5 +1,8 @@
 {
-  "name": "example-basic",
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "lint:all": "npm run lint && npm run fmt",
@@ -7,26 +10,23 @@
     "lint:fix": "oxlint --fix",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start",
-    "version": "vinxi version",
-    "prepare": "husky"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.0",
-    "@solidjs/start": "^1.1.0",
+    "@solidjs/router": "^0.15.1",
     "scss": "^0.2.4",
-    "solid-js": "^1.9.5",
-    "vinxi": "^0.5.7"
+    "solid-js": "^1.9.5"
   },
   "devDependencies": {
     "oxfmt": "^0.34.0",
     "oxlint": "^1.49.0",
-    "sass-embedded": "^1.97.3"
-  },
-  "engines": {
-    "node": ">=22"
+    "sass-embedded": "^1.97.3",
+    "solid-devtools": "^0.34.3",
+    "vite": "^7.1.4",
+    "vite-plugin-solid": "^2.11.8"
   }
 }

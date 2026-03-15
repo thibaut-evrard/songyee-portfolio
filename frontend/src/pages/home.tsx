@@ -1,6 +1,6 @@
 import { Meta, Title } from "@solidjs/meta";
-import ProjectPreview from "~/components/Home/ProjectPreview";
-import { APP_CONTENT } from "~/constants/content";
+import ProjectPreview from "@/components/Home/ProjectPreview";
+import { APP_CONTENT } from "@/constants/content";
 
 export default function Home() {
   return (
