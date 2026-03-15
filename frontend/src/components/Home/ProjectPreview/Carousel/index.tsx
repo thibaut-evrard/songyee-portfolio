@@ -1,7 +1,7 @@
 import "./styles.scss";
 import { createSignal } from "solid-js";
-import RichMedia from "~/components/Shared/RichMedia";
-import { ProjectMediaContent } from "~/content/types";
+import RichMedia from "@/components/Shared/RichMedia";
+import { ProjectMediaContent } from "@/content/types";
 
 interface Props {
   content: ProjectMediaContent[];

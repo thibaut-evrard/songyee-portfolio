@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { ROUTES } from "~/constants/routes";
+import { ROUTES } from "@/constants/routes";
 
 const CONTENT = {
   routes: [

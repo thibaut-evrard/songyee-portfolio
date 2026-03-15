@@ -1,7 +1,7 @@
 import { useParams } from "@solidjs/router";
-import RichMedia from "~/components/Shared/RichMedia";
-import { APP_CONTENT } from "~/constants/content";
-import { ProjectContent, ProjectMediaContent } from "~/content/types";
+import RichMedia from "@/components/Shared/RichMedia";
+import { APP_CONTENT } from "@/constants/content";
+import { ProjectContent, ProjectMediaContent } from "@/content/types";
 
 function getAllMedia(content: ProjectContent) {
   return content?.section.reduce((acc, item) => {
@@ -14,9 +14,8 @@ function getAllMedia(content: ProjectContent) {
 
 export default function Project() {
   const params = useParams();
-  const content = APP_CONTENT.projects.find(
-    (project) => project.slug === params.project,
-  );
+  console.log("Project params:", params.uid);
+  const content = APP_CONTENT.projects.find((project) => project.slug === params.uid);
 
   if (!content) {
     return null;

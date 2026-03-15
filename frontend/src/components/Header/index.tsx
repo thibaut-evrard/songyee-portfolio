@@ -1,6 +1,6 @@
-import { APP_CONTENT } from "~/constants/content";
+import { APP_CONTENT } from "@/constants/content";
 import "./styles.scss";
-import { ROUTES } from "~/constants/routes";
+import { ROUTES } from "@/constants/routes";
 
 const filters = [
   APP_CONTENT.general.filters.all,
