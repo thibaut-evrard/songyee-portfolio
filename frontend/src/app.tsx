@@ -1,5 +1,5 @@
-import { Suspense, type Component } from "solid-js";
 import { MetaProvider, Title } from "@solidjs/meta";
+import { Suspense, type Component } from "solid-js";
 import Header from "./components/Header";
 import { APP_CONTENT } from "./constants/content";
 
