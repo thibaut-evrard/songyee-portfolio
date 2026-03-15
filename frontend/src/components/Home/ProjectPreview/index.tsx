@@ -20,7 +20,9 @@ export default function ProjectPreview(props: Props) {
   return (
     <div>
       <ProjectPreviewCarousel content={props.content.section[0].media} />
-      <a href={ROUTES.project(props.content.slug)}>{getDescription(props.content)}</a>
+      <a href={ROUTES.project(props.content.slug)}>
+        {getDescription(props.content)}
+      </a>
     </div>
   );
 }

@@ -14,8 +14,9 @@ function getAllMedia(content: ProjectContent) {
 
 export default function Project() {
   const params = useParams();
-  console.log("Project params:", params.uid);
-  const content = APP_CONTENT.projects.find((project) => project.slug === params.uid);
+  const content = APP_CONTENT.projects.find(
+    (project) => project.slug === params.uid,
+  );
 
   if (!content) {
     return null;
