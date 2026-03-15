@@ -1,5 +1,6 @@
-import { APP_CONTENT } from "@/constants/content";
+import { useSearchParams } from "@solidjs/router";
 import "./styles.scss";
+import { APP_CONTENT } from "@/constants/content";
 import { ROUTES } from "@/constants/routes";
 
 const filters = [
@@ -10,6 +11,17 @@ const filters = [
 ];
 
 export default function Header() {
+  const [_, setSearchParams] = useSearchParams();
+
+  function updateSearchParams(filter: string) {
+    // oxlint-disable-next-line eqeqeq
+    if (filter == APP_CONTENT.general.filters.all.id) {
+      setSearchParams({ filter: undefined });
+    } else {
+      setSearchParams({ filter });
+    }
+  }
+
   return (
     <header class="header">
       <h1>{APP_CONTENT.general.title}</h1>
@@ -19,7 +31,9 @@ export default function Header() {
           <ul>
             {filters.map((filter) => (
               <li>
-                <a href={`#${filter.id}`}>{filter.name}</a>
+                <button onclick={() => updateSearchParams(filter.id)}>
+                  {filter.name}
+                </button>
               </li>
             ))}
           </ul>
