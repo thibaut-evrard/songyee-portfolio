@@ -20,7 +20,6 @@ export default function Home() {
       <Meta name="description" content={APP_CONTENT.home.meta.description} />
 
       <Wordmark />
-
       <h2>{APP_CONTENT.home.hero.description}</h2>
       <section>
         {APP_CONTENT.projects.map((project) => (
