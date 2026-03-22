@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { useSearchParams } from "@solidjs/router";
+import { useLocation, useSearchParams } from "@solidjs/router";
 import { APP_CONTENT } from "@/constants/content";
 import { ROUTES } from "@/constants/routes";
 import { useHeaderVisibility } from "./useHeaderVisibility";
@@ -12,8 +12,11 @@ const filters = [
 ];
 
 export default function Header() {
+  const { pathname } = useLocation();
   const [_, setSearchParams] = useSearchParams();
-  const headerVisible = useHeaderVisibility();
+  const headerScrollVisible = useHeaderVisibility();
+  const isHome = () => pathname === "/";
+  const headerVisible = () => !isHome() && headerScrollVisible();
 
   function updateSearchParams(filter: string) {
     // oxlint-disable-next-line eqeqeq

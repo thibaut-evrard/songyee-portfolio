@@ -1,3 +1,4 @@
+import "./app.scss";
 import { MetaProvider, Title } from "@solidjs/meta";
 import { Suspense, type Component } from "solid-js";
 import Header from "./components/Header";

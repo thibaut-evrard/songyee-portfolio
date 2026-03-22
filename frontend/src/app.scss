@@ -1,4 +1,8 @@
+@use "./styles/fontnames.scss";
+@use "./styles/fonts.scss";
+
 * {
+  font-family: fontnames.$sans;
   box-sizing: border-box;
 }
 

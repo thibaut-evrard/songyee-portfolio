@@ -1,0 +1,29 @@
+@use "./fontnames.scss";
+
+@font-face {
+  font-family: fontnames.$sans;
+  src: url(/fonts/HafferTRIAL-Regular.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: fontnames.$sans;
+  src: url(/fonts/HafferTRIAL-Medium.woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: fontnames.$serif;
+  src: url(/fonts/STKBureauSerif-Book-Trial.woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: fontnames.$serif;
+  src: url(/fonts/STKBureauSerif-Regular-Trial.woff2);
+  font-weight: 500;
+  font-style: normal;
+}
