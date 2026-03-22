@@ -15,20 +15,17 @@ export default function Home() {
   }
 
   return (
-    <main class="home">
+    <main class="home grid">
       <Title>{APP_CONTENT.home.meta.title}</Title>
       <Meta name="description" content={APP_CONTENT.home.meta.description} />
 
       <Wordmark />
-      <h2>{APP_CONTENT.home.hero.description}</h2>
-      <section>
-        {APP_CONTENT.projects.map((project) => (
-          <ProjectPreview
-            content={project}
-            disabled={getFilteredOut(project)}
-          />
-        ))}
-      </section>
+      <h2 class="home__intro typeset-h2">
+        {APP_CONTENT.home.hero.description}
+      </h2>
+      {APP_CONTENT.projects.map((project) => (
+        <ProjectPreview content={project} disabled={getFilteredOut(project)} />
+      ))}
     </main>
   );
 }

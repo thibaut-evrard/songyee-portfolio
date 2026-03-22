@@ -1,4 +1,9 @@
 .home {
-  display: block;
   margin-top: 32px;
+
+  &__intro {
+    grid-column: 5 / span 8;
+    text-align: center;
+    margin-bottom: 35px;
+  }
 }

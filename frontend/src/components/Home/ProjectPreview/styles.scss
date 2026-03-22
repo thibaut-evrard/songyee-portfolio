@@ -1,4 +1,8 @@
 .project-preview {
+  grid-column: 5 / span 8;
+  display: flex;
+  flex-direction: column;
+
   &.disabled {
     opacity: 0.5;
     pointer-events: none;

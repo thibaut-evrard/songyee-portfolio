@@ -1,2 +1,11 @@
+@use "./fontnames.scss";
+
 .typeset-h1 {
+}
+
+.typeset-h2 {
+  font-family: fontnames.$serif;
+  font-size: 40px;
+  line-height: 120%;
+  font-weight: 300;
 }

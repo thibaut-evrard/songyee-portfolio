@@ -1,5 +1,7 @@
 @use "./styles/fontnames.scss";
 @use "./styles/fonts.scss";
+@use "./styles/typography.scss";
+@use "./styles/grid.scss";
 
 * {
   font-family: fontnames.$sans;
