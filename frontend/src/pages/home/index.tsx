@@ -1,3 +1,4 @@
+import "./styles.scss";
 import { Meta, Title } from "@solidjs/meta";
 import { useSearchParams } from "@solidjs/router";
 import ProjectPreview from "@/components/Home/ProjectPreview";
@@ -13,7 +14,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main class="home">
       <Title>{APP_CONTENT.home.meta.title}</Title>
       <Meta name="description" content={APP_CONTENT.home.meta.description} />
 

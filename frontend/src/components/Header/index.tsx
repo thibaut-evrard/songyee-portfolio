@@ -1,18 +1,8 @@
 import "./styles.scss";
 import { useSearchParams } from "@solidjs/router";
-import { createEffect } from "solid-js";
 import { APP_CONTENT } from "@/constants/content";
 import { ROUTES } from "@/constants/routes";
-// oxlint-disable-next-line no-unused-vars
-import { titleScaler } from "./useTitleScale";
-
-declare module "solid-js" {
-  namespace JSX {
-    interface Directives {
-      titleScaler: true;
-    }
-  }
-}
+import { useHeaderVisibility } from "./useHeaderVisibility";
 
 const filters = [
   APP_CONTENT.general.filters.all,
@@ -22,9 +12,8 @@ const filters = [
 ];
 
 export default function Header() {
-  // oxlint-disable-next-line no-unassigned-vars
-  let titleRef!: HTMLAnchorElement;
   const [_, setSearchParams] = useSearchParams();
+  const headerVisible = useHeaderVisibility();
 
   function updateSearchParams(filter: string) {
     // oxlint-disable-next-line eqeqeq
@@ -35,13 +24,9 @@ export default function Header() {
     }
   }
 
-  createEffect(() => {
-    console.log(titleRef);
-  });
-
   return (
-    <header class="header">
-      <a href={ROUTES.home} class="header__title" use:titleScaler>
+    <header class="header" hidden={!headerVisible()}>
+      <a href={ROUTES.home} class="header__title">
         <h1>{APP_CONTENT.general.title}</h1>
       </a>
       <nav>

@@ -8,6 +8,10 @@
   z-index: 1;
   width: 100%;
 
+  &[hidden] {
+    opacity: 0;
+  }
+
   &__title {
     margin: auto;
     transform-origin: top;
