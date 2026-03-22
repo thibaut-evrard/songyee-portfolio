@@ -1,13 +1,29 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   border: 1px solid black;
   padding: 20px;
   display: flex;
+  z-index: 1;
+  width: 100%;
+
+  &[hidden] {
+    opacity: 0;
+  }
 
   &__title {
-    flex: 1;
+    margin: auto;
+    transform-origin: top;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   nav {
+    position: absolute;
     display: flex;
     gap: 1rem;
   }

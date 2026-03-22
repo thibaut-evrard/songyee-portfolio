@@ -1,6 +1,8 @@
-import { APP_CONTENT } from "@/constants/content";
 import "./styles.scss";
+import { useSearchParams } from "@solidjs/router";
+import { APP_CONTENT } from "@/constants/content";
 import { ROUTES } from "@/constants/routes";
+import { useHeaderVisibility } from "./useHeaderVisibility";
 
 const filters = [
   APP_CONTENT.general.filters.all,
@@ -10,16 +12,32 @@ const filters = [
 ];
 
 export default function Header() {
+  const [_, setSearchParams] = useSearchParams();
+  const headerVisible = useHeaderVisibility();
+
+  function updateSearchParams(filter: string) {
+    // oxlint-disable-next-line eqeqeq
+    if (filter == APP_CONTENT.general.filters.all.id) {
+      setSearchParams({ filter: undefined });
+    } else {
+      setSearchParams({ filter });
+    }
+  }
+
   return (
-    <header class="header">
-      <h1>{APP_CONTENT.general.title}</h1>
+    <header class="header" hidden={!headerVisible()}>
+      <a href={ROUTES.home} class="header__title">
+        <h1>{APP_CONTENT.general.title}</h1>
+      </a>
       <nav>
         <div>
           <a href={ROUTES.home}>{APP_CONTENT.general.menu.work}</a>
           <ul>
             {filters.map((filter) => (
               <li>
-                <a href={`#${filter.id}`}>{filter.name}</a>
+                <button onclick={() => updateSearchParams(filter.id)}>
+                  {filter.name}
+                </button>
               </li>
             ))}
           </ul>

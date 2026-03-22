@@ -31,7 +31,415 @@
   "projects": [
     {
       "currentKey": "section[4].media[].size",
-      "slug": "example",
+      "slug": "example-0",
+      "meta": {
+        "title": "songyee.kim — Example project",
+        "description": "An example project"
+      },
+      "info": {
+        "client": "Client name",
+        "project_name": "Project name",
+        "tag": "filter_digital",
+        "year": "2025"
+      },
+      "section": [
+        {
+          "title": "Challenge",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Insight",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Idea",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Impact",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Credits",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "currentKey": "section[4].media[].size",
+      "slug": "example-1",
+      "meta": {
+        "title": "songyee.kim — Example project",
+        "description": "An example project"
+      },
+      "info": {
+        "client": "Client name",
+        "project_name": "Project name",
+        "tag": "filter_brand",
+        "year": "2025"
+      },
+      "section": [
+        {
+          "title": "Challenge",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Insight",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Idea",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Impact",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Credits",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "currentKey": "section[4].media[].size",
+      "slug": "example-2",
+      "meta": {
+        "title": "songyee.kim — Example project",
+        "description": "An example project"
+      },
+      "info": {
+        "client": "Client name",
+        "project_name": "Project name",
+        "tag": "filter_art_direction",
+        "year": "2025"
+      },
+      "section": [
+        {
+          "title": "Challenge",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Insight",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Idea",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Impact",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        },
+        {
+          "title": "Credits",
+          "description": "Automotive’s first house of luxury. Droptail is an emblem of true personalisation where limitless creativity and craft intersect. Creating three bespoke worlds to deliver otherworldly escapism for each Droptail.",
+          "media": [
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            },
+            {
+              "src": "project-(example)/us.jpeg",
+              "alt": "alt",
+              "type": "image",
+              "size": "small"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "currentKey": "section[4].media[].size",
+      "slug": "example-3",
       "meta": {
         "title": "songyee.kim — Example project",
         "description": "An example project"

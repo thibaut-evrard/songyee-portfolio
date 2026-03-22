@@ -1,9 +1,11 @@
+import "./styles.scss";
 import { ROUTES } from "@/constants/routes";
 import { ProjectContent } from "@/content/types";
 import ProjectPreviewCarousel from "./Carousel";
 
 interface Props {
   content: ProjectContent;
+  disabled?: boolean;
 }
 
 function getDescription(content: ProjectContent) {
@@ -18,9 +20,11 @@ function getDescription(content: ProjectContent) {
 
 export default function ProjectPreview(props: Props) {
   return (
-    <div>
+    <div class={`project-preview ${props.disabled ? "disabled" : ""}`}>
       <ProjectPreviewCarousel content={props.content.section[0].media} />
-      <a href={ROUTES.project(props.content.slug)}>{getDescription(props.content)}</a>
+      <a href={ROUTES.project(props.content.slug)}>
+        {getDescription(props.content)}
+      </a>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: fit-content;
+  align-items: start;
+
+  &__copy {
+    width: 300px;
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  &__media {
+    position: relative;
+    flex: 1;
+
+    .rich-media {
+      position: relative;
+      max-width: 50%;
+      object-fit: contain;
+      display: inline-block;
+    }
+  }
+}
