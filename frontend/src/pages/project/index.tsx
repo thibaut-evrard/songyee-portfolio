@@ -1,26 +1,17 @@
 import "./styles.scss";
-import { redirect, useParams } from "@solidjs/router";
 import { createSignal, For } from "solid-js";
 import IntersectionObserved from "@/components/InstersectionObserved";
 import { animateScroll } from "@/components/InstersectionObserved/utils";
 import RichMedia from "@/components/Shared/RichMedia";
-import { APP_CONTENT } from "@/constants/content";
+import { useContent } from "./useContent";
 
 export default function Project() {
   // oxlint-disable-next-line no-unassigned-vars
   let mediaSectionContainerRef!: HTMLDivElement;
 
+  const content = useContent();
   const [activeSectionIndex, setActiveSectionIndex] = createSignal<number>(0);
   const [isAutoScroll, setIsAutoScroll] = createSignal(false);
-  const params = useParams();
-  const content = APP_CONTENT.projects.find(
-    (project) => project.slug === params.uid,
-  );
-
-  if (!content) {
-    redirect("/404");
-    return;
-  }
 
   function scrollToSection(index: number) {
     if (!mediaSectionContainerRef) {
@@ -37,6 +28,7 @@ export default function Project() {
   }
 
   function handleVisible(isVisible: boolean, index: number) {
+    console.log(isVisible, index);
     if (isVisible && !isAutoScroll()) {
       setActiveSectionIndex(index);
     }
@@ -52,22 +44,29 @@ export default function Project() {
   }
 
   return (
-    <div class="project">
+    <div class="project grid">
       <section class="project__copy">
-        <For each={content.section}>
-          {(item, index) => (
-            <details
-              open={activeSectionIndex() === index()}
-              onclick={(e) => {
-                e.preventDefault();
-                handleShowDetail(index());
-              }}
-            >
-              <summary>{item.title}</summary>
-              <p>{item.description}</p>
-            </details>
-          )}
-        </For>
+        <div class="project__intro">
+          <p>{content.info.client}</p>
+          <h2>{content.info.project_name}</h2>
+          <p>{content.info.tag}</p>
+        </div>
+        <div class="project__copy__sticky">
+          <For each={content.section}>
+            {(item, index) => (
+              <details
+                open={activeSectionIndex() === index()}
+                onclick={(e) => {
+                  e.preventDefault();
+                  handleShowDetail(index());
+                }}
+              >
+                <summary>{item.title}</summary>
+                <p>{item.description}</p>
+              </details>
+            )}
+          </For>
+        </div>
       </section>
       <section class="project__media" ref={mediaSectionContainerRef}>
         <For each={content.section}>
@@ -77,7 +76,11 @@ export default function Project() {
               onVisible={(isVisible) => handleVisible(isVisible, index())}
             >
               <For each={item.media}>
-                {(media) => <RichMedia content={media} />}
+                {(media) => (
+                  <div class="project__media__card">
+                    <RichMedia content={media} />
+                  </div>
+                )}
               </For>
             </IntersectionObserved>
           )}

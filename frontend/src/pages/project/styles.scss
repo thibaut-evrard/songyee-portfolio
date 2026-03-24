@@ -1,27 +1,49 @@
+@use "../../styles/colors";
+
 .project {
+  padding: 20px;
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  height: fit-content;
-  align-items: start;
 
   &__copy {
-    width: 300px;
     display: block;
-    position: sticky;
-    top: 0;
-    left: 0;
+    grid-column: 1 / 5;
+
+    &__sticky {
+      position: sticky;
+      top: 20px;
+      left: 0;
+    }
+
+    details {
+      margin-bottom: 4px;
+      border-radius: 4px;
+      padding: 16px;
+      background-color: colors.$grey-light;
+    }
   }
 
   &__media {
+    grid-column: 5 / -1;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 8px;
+    row-gap: 10px;
     flex: 1;
+
+    &__card {
+      position: relative;
+      grid-column: span 3;
+      border-radius: 4px;
+      overflow: hidden;
+    }
 
     .rich-media {
       position: relative;
-      max-width: 50%;
+      width: 100%;
       object-fit: contain;
       display: inline-block;
+      margin-bottom: -3px;
     }
   }
 }

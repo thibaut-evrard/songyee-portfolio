@@ -24,11 +24,10 @@ export default function IntersectionObserved(props: Props) {
         });
       },
       {
-        rootMargin: "0px",
+        rootMargin: "10px",
         threshold: props.threshold ?? 0,
       },
     );
-
     observer.observe(containerRef);
 
     return () => {
@@ -36,5 +35,9 @@ export default function IntersectionObserved(props: Props) {
     };
   });
 
-  return <div ref={containerRef}>{safeChildren()}</div>;
+  return (
+    <div ref={containerRef} style={"display: contents"}>
+      {safeChildren()}
+    </div>
+  );
 }
