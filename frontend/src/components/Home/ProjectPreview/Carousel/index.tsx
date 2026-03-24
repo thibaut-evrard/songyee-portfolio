@@ -1,10 +1,11 @@
 import "./styles.scss";
-import { createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import RichMedia from "@/components/Shared/RichMedia";
 import { ProjectMediaContent } from "@/content/types";
 
 interface Props {
   content: ProjectMediaContent[];
+  onChange: (activeIndex: number) => void;
 }
 
 export default function ProjectPreviewCarousel(props: Props) {
@@ -23,6 +24,10 @@ export default function ProjectPreviewCarousel(props: Props) {
     }
   }
 
+  createEffect(() => {
+    props.onChange(mediaIndex());
+  });
+
   return (
     <button onclick={updateMediaIndex} class="project-preview-carousel">
       <div class="project-preview-carousel__content" ref={containerRef}>
@@ -30,9 +35,6 @@ export default function ProjectPreviewCarousel(props: Props) {
           <RichMedia content={media} />
         ))}
       </div>
-      <p>
-        {String(mediaIndex() + 1)} / {mediaLength}
-      </p>
     </button>
   );
 }
